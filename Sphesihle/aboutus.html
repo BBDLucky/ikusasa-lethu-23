@@ -1,0 +1,233 @@
+<html lang="en">
+  <head>
+    <link rel="webicon" src="Logo.jpg">
+    <title>FoodConnect Alexandra</title>
+  </head>
+  <style>
+Body {
+    background-color: skyblue;
+    margin: 120px auto 120px auto;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+    }
+
+    header .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar .logo {
+      color: blue;
+      font-weight: 600;
+      font-size: 2.1rem;
+      text-decoration: none;
+    }
+
+    .navbar .logo span {
+      color: red;
+    }
+
+    .navbar .menu-links {
+      display: flex;
+      list-style: none;
+      gap: 35px;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .navbar a:hover {
+      color: red;
+    }
+
+    .navbar span:hover {
+      color: blue;
+    }
+
+    #close-menu-btn {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      cursor: pointer;
+      display: none;
+    }
+
+    #hamburger-btn {
+      color: red;
+      cursor: pointer;
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 10px;
+      }
+    }
+      header.show-mobile-menu::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+      }
+
+      .navbar .logo {
+        font-size: 1.7rem;
+      }
+
+      #hamburger-btn,
+      #close-menu-btn {
+        display: block;
+        color: blue;
+      }
+
+      .navbar .menu-links {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100vh;
+        background: transparent;
+        flex-direction: column;
+        padding: 70px 40px 0;
+        transition: left 0.2s ease;
+      }
+
+      header.show-mobile-menu .navbar .menu-links {
+        left: 0;
+      }
+
+      .navbar a {
+        color: black;
+      }
+    
+
+    
+  #hamburger-btn, #close-menu-btn {
+    display: block;
+    color: blue;
+  }
+
+  .navbar .menu-links {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: transparent;
+    flex-direction: column;
+    padding: 70px 40px 0;
+    transition: left 0.2s ease;
+  }
+
+  header.show-mobile-menu .navbar .menu-links {
+    left: 0;
+  }
+  .navbar a{
+      color:black;
+  }
+
+h2.dblUnderlined {
+  text-align: center;
+  color: navy;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  color: black;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  padding: 20px 
+}
+
+</style>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a class="logo" href="#">Food<span>Connect. </span></a>
+        <ul class="menu-links">
+          <span id="close-menu-btn" class="material-symbols-outlined">--></span>
+          <li><a href="index.html"><b>Home</b></a></li>
+          <li><a href="donation.html"><b>Donate</b></a></li>
+          <li><a href="request.html"><b>Request</b></a></li>
+          <li><a href="volunteer.html"><b>Volunteer</b></a></li>
+          <li><a href="feedback.html"><b>Feedback</b></a></li>
+          <li><a href="aboutus.html"><b>About us</b></a></li>
+        </ul>
+        <span id="hamburger-btn" class="material-symbols-outlined">§</span>
+      </nav>
+    </header>
+<div>
+  <h2 class="dblUnderlined">About us.</h2>
+    <div class="input-block">
+      <label><b>~ we aim to provide a platform that addresses the problems of food expiry and scarcity in the community. This website will connect surplus food donors with individuals and organizations in need, reducing food waste, and ensuring that everyone in Alexandra has access to nutritious meals.</b></label>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+    <h2 class="dblUnderlined">Contacts</h2>
+    <div class="input-block">
+      <label>If you have any questions, please don't hesitate to contact us:</p>
+<br>
+<br>
+		<ul>
+			<li><b>Email: info@foodconnectalexandra.com</b></li>
+			<li><b>Phone: +27 123 456 789</b></li>
+			<li><b>Address: 123 Main Street, Alexandra, Johannesburg/b></li>
+		</ul></label>
+    </div>
+</div>
+
+   <script>
+      const header = document.querySelector("header");
+      const hamburgerBtn = document.querySelector("#hamburger-btn");
+      const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+      // Toggle mobile menu on hamburger button click
+      hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+
+      // Close mobile menu on close button click
+      closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+    </script>
+  
+   <footer>
+      <p href="Aboutus.html">&copy; 2023 FoodConnect Alexandra</p>
+    </footer>
+  </body>
+</html>

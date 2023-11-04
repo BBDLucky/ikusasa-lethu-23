@@ -1,0 +1,204 @@
+<html lang="en">
+  <head>
+    <link rel="webicon" src="Logo.jpg">
+    <title>FoodConnect Alexandra</title>
+  </head>
+  <style>
+    Body {
+      background-color: skyblue;
+      height: 80vh;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+    }
+
+    header .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar .logo {
+      color: blue;
+      font-weight: 600;
+      font-size: 2.1rem;
+      text-decoration: none;
+    }
+
+    .navbar .logo span {
+      color: red;
+    }
+
+    .navbar .menu-links {
+      display: flex;
+      list-style: none;
+      gap: 35px;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .navbar a:hover {
+      color: red;
+    }
+
+    .navbar span:hover {
+      color: blue;
+    }
+
+    #close-menu-btn {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      cursor: pointer;
+      display: none;
+    }
+
+    #hamburger-btn {
+      color: red;
+      cursor: pointer;
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 10px;
+      }
+
+      header.show-mobile-menu::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+      }
+
+      .navbar .logo {
+        font-size: 1.7rem;
+      }
+
+      #hamburger-btn,
+      #close-menu-btn {
+        display: block;
+        color: blue;
+      }
+
+      .navbar .menu-links {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100vh;
+        background: transparent;
+        flex-direction: column;
+        padding: 70px 40px 0;
+        transition: left 0.2s ease;
+      }
+
+      header.show-mobile-menu .navbar .menu-links {
+        left: 0;
+      }
+
+      .navbar a {
+        color: black;
+      }
+    }
+.intro-section {
+    margin-top: 270px;
+    text-align: center;
+    Height: 100vh;
+}
+
+.intro-section h2 {   text-align: center;
+  color: black;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.intro-section a{
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: auto;
+    border-color:blue;
+    background: transparent;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    width: 50%;
+}
+.intro-section button[type="go"] {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: auto;
+  border-color:black;
+  background: transparent;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+    footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: blue;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a class="logo" href="#">Food<span>Connect. </span></a>
+        <ul class="menu-links">
+          <span id="close-menu-btn" class="material-symbols-outlined">--></span>
+          <li><a href="index.html"><b>Home</b></a></li>
+          <li><a href="donation.html"><b>Donate</b></a></li>
+          <li><a href="request.html"><b>Request</b></a></li>
+          <li><a href="volunteer.html"><b>Volunteer</b></a></li>
+          <li><a href="feedback.html"><b>Feedback</b></a></li>
+          <li><a href="aboutus.html"><b>About us</b></a></li>
+        </ul>
+        <span id="hamburger-btn" class="material-symbols-outlined">§</span>
+      </nav>
+    </header>
+
+    <br>
+    <section class="intro-section">
+    <h2>Let's make change </h2>
+      <blockquote>
+        "With every donation you make, A life is saved and a soul is fed."
+      </blockquote>
+      <br>
+      <button type="go" href="donation.html">Donate</button>
+      <button type="go" href="request.html">Request</button>
+    </section>
+
+    <footer>
+      <p href="Aboutus.html">&copy; 2023 FoodConnect Alexandra</p>
+    </footer>
+  </body>
+</html>
